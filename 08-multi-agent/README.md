@@ -1,6 +1,6 @@
 # Multi agent design patterns
 
-As soon as you start working on a project that involves multiple agents, you will need to consider the multi-agent design pattern. However, it might not be immediately clear when to switch to multi-agents and what the advantages are.  
+As soon as you start working on a project that involves multiple agents, you will need to consider the multi-agent design pattern. However, it might not be immediately clear when to switch to multi-agents and what the advantages are.
 
 ## Introduction
 
@@ -21,15 +21,15 @@ After this lesson, you should be able to:
 
 What's the bigger picture?
 
-*Multi agents are a design pattern that allows multiple agents to work together to achieve a common goal*. 
+*Multi agents are a design pattern that allows multiple agents to work together to achieve a common goal*.
 
-This pattern is widely used in various fields, including robotics, autonomous systems, and distributed computing. 
+This pattern is widely used in various fields, including robotics, autonomous systems, and distributed computing.
 
 ## Scenarios Where Multi-Agents Are Applicable
 
 So what scenarios are a good use case for using multi-agents? The answer is that there are many scenarios where employing multiple agents is beneficial especially in the following cases:
 
-- **Large workloads**: Large workloads can be divided into smaller tasks and assigned to different agents, allowing for parallel processing and faster completion. Example of this is in the case of a large data processing task.
+- **Large workloads**: Large workloads can be divided into smaller tasks and assigned to different agents, allowing for parallel processing and faster completion. An example of this is in the case of a large data processing task.
 - **Complex tasks**: Complex tasks, like large workloads, can be broken down into smaller subtasks and assigned to different agents, each specializing in a specific aspect of the task. A good example of this is in the case of autonomous vehicles where different agents manage navigation, obstacle detection, and communication with other vehicles.
 - **Diverse expertise**: Different agents can have diverse expertise, allowing them to handle different aspects of a task more effectively than a single agent. For this case, a good example is in the case of healthcare where agents can manage diagnostics, treatment plans, and patient monitoring.
 
@@ -49,11 +49,11 @@ Compare this to a travel bureau run as a mom and pop store versus a travel burea
 
 Before you can implement the multi-agent design pattern, you need to understand the building blocks that make up the pattern.
 
-Lets make this more concrete by again looking at the example of booking a trip for a user. In this case, the building blocks would include:
+Let's make this more concrete by again looking at the example of booking a trip for a user. In this case, the building blocks would include:
 
 - **Agent Communication**: Agents for finding flights, booking hotels, and rental cars need to communicate and share information about the user's preferences and constraints. You need to decide on the protocols and methods for this communication. What this means concretely is that the agent for finding flights needs to communicate with the agent for booking hotels to ensure that the hotel is booked for the same dates as the flight. That means that the agents need to share information about the user's travel dates, meaning that you need to decide *which agents are sharing info and how they are sharing info*.
-- **Coordination Mechanisms**: Agents need to coordinate their actions to ensure that the user's preferences and constraints are met. A user preference could be that they want a hotel close to the airport whereas a constraint could be that rental cars are only available at the airport. This means that the agent for booking hotels needs to coordinate with the agent for booking rental cars to ensure that the user's preferences and constraints are met. This means that you need to decide *how the agents are coordinating their actions*. 
-- **Agent Architecture**: Agents need to have the internal structure to make decisions and learn from their interactions with the user. This means that the agent for finding flights needs to have the internal structure to make decisions about which flights to recommend to the user. This means that you need to decide *how the agents are making decisions and learning from their interactions with the user*. Examples on how an agent learn and improve could be that the agent for finding flights could use a machine learning model to recommend flights to the user based on their past preferences.
+- **Coordination Mechanisms**: Agents need to coordinate their actions to ensure that the user's preferences and constraints are met. A user preference could be that they want a hotel close to the airport whereas a constraint could be that rental cars are only available at the airport. This means that the agent for booking hotels needs to coordinate with the agent for booking rental cars to ensure that the user's preferences and constraints are met. This means that you need to decide *how the agents are coordinating their actions*.
+- **Agent Architecture**: Agents need to have the internal structure to make decisions and learn from their interactions with the user. This means that the agent for finding flights needs to have the internal structure to make decisions about which flights to recommend to the user. This means that you need to decide *how the agents are making decisions and learning from their interactions with the user*. Examples of how an agent learns and improves could be that the agent for finding flights could use a machine learning model to recommend flights to the user based on their past preferences.
 - **Visibility into Multi-Agent Interactions**: You need to have visibility into how the multiple agents are interacting with each other. This means that you need to have tools and techniques for tracking agent activities and interactions. This could be in the form of logging and monitoring tools, visualization tools, and performance metrics.
 - **Multi-Agent Patterns**: There are different patterns for implementing multi-agent systems, such as centralized, decentralized, and hybrid architectures. You need to decide on the pattern that best fits your use case.
 - **Human in the loop**: In most cases, you will have a human in the loop and you need to instruct the agents when to ask for human intervention. This could be in the form of a user asking for a specific hotel or flight that the agents have not recommended or asking for confirmation before booking a flight or hotel.
@@ -66,21 +66,21 @@ For example, in the case of booking a trip for a user, you could have a dashboar
 
 Let's look at each of these aspects more in detail.
 
-- **Logging and Monitoring Tools**: You want to have logging done per each action taken by an agent. A log entry could store information on the agent that took the action, the action taken, the time the action was taken, and the outcome of the action. This information can then be used for debugging, optimizing and more.
+- **Logging and Monitoring Tools**: You want to have logging done for each action taken by an agent. A log entry could store information on the agent that took the action, the action taken, the time the action was taken, and the outcome of the action. This information can then be used for debugging, optimizing and more.
 
 - **Visualization Tools**: Visualization tools can help you see the interactions between agents in a more intuitive way. For example, you could have a graph that shows the flow of information between agents. This could help you identify bottlenecks, inefficiencies, and other issues in the system.
 
 - **Performance Metrics**: Performance metrics can help you track the effectiveness of the multi-agent system. For example, you could track the time taken to complete a task, the number of tasks completed per unit of time, and the accuracy of the recommendations made by the agents. This information can help you identify areas for improvement and optimize the system.
 
-## Multi agent patterns
+## Multi-Agent Patterns
 
-Let's dive into some concrete patterns we can use to create multi agent apps. Here are some interesting patterns worth considering:
+Let's dive into some concrete patterns we can use to create multi-agent apps. Here are some interesting patterns worth considering:
 
 ### Group chat
 
 This pattern is useful when you want to create a group chat application where multiple agents can communicate with each other. Typical use cases for this pattern include team collaboration, customer support, and social networking.
 
-In this pattern, each agent represents a user in the group chat, and messages are exchanged between agents using a messaging protocol. The agents can send messages to the group chat, receive messages from the group chat, and respond to messages from other agents. 
+In this pattern, each agent represents a user in the group chat, and messages are exchanged between agents using a messaging protocol. The agents can send messages to the group chat, receive messages from the group chat, and respond to messages from other agents.
 
 This pattern can be implemented using a centralized architecture where all messages are routed through a central server, or a decentralized architecture where messages are exchanged directly.
 
@@ -104,19 +104,19 @@ Why you would want multiple agents to collaborate is because each agent can have
 
 Let's take an example where a user wants a recommendation on the best stock to buy on the stock market.
 
-- **Industry expert**:. One agent could be an expert in a specific industry. 
-- **Technical analysis**: Another agent could be an expert in technical analysis. 
-- **Fundamental analysis**: and another agent could be an expert in fundamental analysis. By collaborating, these agents can provide a more comprehensive recommendation to the user.  
+- **Industry expert**:. One agent could be an expert in a specific industry.
+- **Technical analysis**: Another agent could be an expert in technical analysis.
+- **Fundamental analysis**: and another agent could be an expert in fundamental analysis. By collaborating, these agents can provide a more comprehensive recommendation to the user.
 
 ![Recommendation](./images/multi-agent-filtering.png)
 
 ## Scenario: Refund process
 
-Consider a scenario where a customer is trying to get refund for a product, there can be quite a few agents involved in this process but lets divide it up between agents specific for this process and general agents that can be used in other processes.
+Consider a scenario where a customer is trying to get a refund for a product, there can be quite a few agents involved in this process but let's divide it up between agents specific for this process and general agents that can be used in other processes.
 
 **Agents specific for the refund process**:
 
-Following there are some agents that could be involved in the refund process:
+Following are some agents that could be involved in the refund process:
 
 - **Customer agent**: This agent represents the customer and is responsible for initiating the refund process.
 - **Seller agent**: This agent represents the seller and is responsible for processing the refund.
@@ -161,7 +161,7 @@ Question: When should you consider using multi-agents?
 - [] A2: When you have a large workload
 - [] A3: When you have a simple task.
 
-[Solution quiz](./solution/solution-quiz.md) 
+[Solution quiz](./solution/solution-quiz.md)
 
 ## Summary
 

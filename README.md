@@ -1,6 +1,6 @@
 # AI Agents for Beginners - A Course
 
-![Generative AI For Beginners](./images/repo-thumbnail.png?WT.mc_id=academic-105485-koreyst)
+![Generative AI For Beginners](./images/repo-thumbnail.png)
 
 ## 10 Lessons teaching everything you need to know to start building AI Agents
 
@@ -31,7 +31,7 @@ Don't forget to [star (🌟) this repo](https://docs.github.com/en/get-started/e
 
 Each lesson in this course includes code examples, which can be found in the code_samples folder. You can [fork this repo](https://github.com/microsoft/ai-agents-for-beginners/fork) to create your own copy.  
 
-The code example in these exercise, utilise Azure AI Foundry and GitHub Model Catalogs for interacting with Language Models:
+The code example in these exercises, utilize Azure AI Foundry and GitHub Model Catalogs for interacting with Language Models:
 
 - [Github Models](https://aka.ms/ai-agents-beginners/github-models) - Free / Limited
 - [Azure AI Foundry](https://aka.ms/ai-agents-beginners/ai-foundry) - Azure Account Required
@@ -48,7 +48,7 @@ For more information on running the code for this course, go to the [Course Setu
 
 Do you have suggestions or found spelling or code errors? [Raise an issue](https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst) or [Create a pull request](https://github.com/microsoft/ai-agents-for-beginners/pulls?WT.mc_id=academic-105485-koreyst)
 
-If you get stuck or have any questions about bulding AI Agents, join our [Azure AI Community Discord](https://discord.gg/kzRShWzttr).
+If you get stuck or have any questions about building AI Agents, join our [Azure AI Community Discord](https://discord.gg/kzRShWzttr).
 
 ## 📂 Each lesson includes
 
@@ -66,7 +66,7 @@ If you get stuck or have any questions about bulding AI Agents, join our [Azure 
 | Understanding Agentic Design Patterns  | [Link](./03-agentic-design-patterns/README.md)  |
 | Tool Use Design Pattern                | [Link](./04-tool-use/README.md)                    |
 | Agentic RAG                            | [Link](./05-agentic-rag/README.md)                 |
-| Building Trustworty AI Agents          | [Link](./06-building-trustworthy-agents/README.md) |
+| Building Trustworthy AI Agents          | [Link](./06-building-trustworthy-agents/README.md) |
 | Planning Design Pattern                | [Link](./07-planning-design/README.md)             |
 | Multi-Agent Design Pattern             | [Link](./08-multi-agent/README.md)                 |
 | Metacognition Design Pattern           | [Link](./09-metacognition/README.md)               |
@@ -102,6 +102,10 @@ Our team produces other courses! Check out:
 - [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 - [Mastering GitHub Copilot for C#/.NET Developers](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 - [Choose Your Own Copilot Adventure](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+
+## 🌟 Community Thanks
+
+Thanks to [Shivam Goyal](https://www.linkedin.com/in/shivam2003/) for contributing important code samples demonstrating Agentic RAG. 
 
 ## Contributing
 

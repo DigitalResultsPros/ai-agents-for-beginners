@@ -1,6 +1,6 @@
-# Tool Use Design Pattern  
+# Tool Use Design Pattern
 
-Tools are interesting because they allow AI agents to have a broader range of capabilities. Instead of the agent having a limited set of actions it can perform, by adding a tool, the agent can now perform a wide range of actions. In this chapter, we will look at the Tool Use Design Pattern, which describes how AI agents can use specific tools to achieve their goals.  
+Tools are interesting because they allow AI agents to have a broader range of capabilities. Instead of the agent having a limited set of actions it can perform, by adding a tool, the agent can now perform a wide range of actions. In this chapter, we will look at the Tool Use Design Pattern, which describes how AI agents can use specific tools to achieve their goals.
 
 ## Introduction
 
@@ -38,17 +38,17 @@ AI Agents can leverage tools to complete complex tasks, retrieve information, or
 
 These building blocks allow the AI agent to perform a wide range of tasks. Let's look at the key elements needed to implement the Tool Use Design Pattern:
 
-- **Function/Tool Calling**: This is the primary way to enable LLMs to interact with tools. Functions or tools are blocks of reusable code that agents use to carry out tasks. These can range from simple functions like a calculator to API calls to third-party services such as stock price lookups or weather forecasts1.
+- **Function/Tool Calling**: This is the primary way to enable LLMs to interact with tools. Functions or tools are blocks of reusable code that agents use to carry out tasks. These can range from simple functions like a calculator to API calls to third-party services such as stock price lookups or weather forecasts.
 
-- **Dynamic Information Retrieval**: Agents can query external APIs or databases to fetch up-to-date data. This is useful for tasks like data analysis, fetching stock prices, or weather information1.
+- **Dynamic Information Retrieval**: Agents can query external APIs or databases to fetch up-to-date data. This is useful for tasks like data analysis, fetching stock prices, or weather information.
 
-- **Code Execution and Interpretation**: Agents can execute code or scripts to solve mathematical problems, generate reports, or perform simulations1.
+- **Code Execution and Interpretation**: Agents can execute code or scripts to solve mathematical problems, generate reports, or perform simulations.
 
-- **Workflow Automation**: This involves automating repetitive or multi-step workflows by integrating tools like task schedulers, email services, or data pipelines1.
+- **Workflow Automation**: This involves automating repetitive or multi-step workflows by integrating tools like task schedulers, email services, or data pipelines.
 
-- **Customer Support**: Agents can interact with CRM systems, ticketing platforms, or knowledge bases to resolve user queries1.
+- **Customer Support**: Agents can interact with CRM systems, ticketing platforms, or knowledge bases to resolve user queries.
 
-- **Content Generation and Editing: Agents can leverage tools like grammar checkers, text summarizers, or content safety evaluators to assist with content creation tasks**.
+- **Content Generation and Editing**: Agents can leverage tools like grammar checkers, text summarizers, or content safety evaluators to assist with content creation tasks.
 
 Next, let's look at Function/Tool Calling in more detail.
  
@@ -80,7 +80,7 @@ Let's use the example of getting the current time in a city to illustrate:
 1. **Create a Function Schema**:
 
     Next we will define a JSON schema that contains the function name, description of what the function does, and the names and descriptions of the function parameters.
-    We will then take this schema and pass it to the client created previously, along with the users request to find the time in San Francisco. What's important to note is that a **tool call** is what is returned, **not** the final answer to the question. As mentioned earlier, the LLM returns the name of the function it selected for the task, and the arguments that will be passed to it. 
+    We will then take this schema and pass it to the client created previously, along with the users request to find the time in San Francisco. What's important to note is that a **tool call** is what is returned, **not** the final answer to the question. As mentioned earlier, the LLM returns the name of the function it selected for the task, and the arguments that will be passed to it.
 
     ```python
     # Function description for the model to read
@@ -267,7 +267,7 @@ Imagine you are a sales agent at a company called Contoso. You want to develop a
 
 The following image illustrates how you could use Azure AI Agent Service to analyze your sales data:
 
-![Agentic Service In Action](./images/agent-service-in-action.jpg?WT.mc_id=academic-105485-koreyst)
+![Agentic Service In Action](./images/agent-service-in-action.jpg)
 
 To use any of these tools with the service we can create a client and define a tool or toolset. To implement this practically we can use the following Python code. The LLM will be able to look at the toolset and decide whether to use the user created function, `fetch_sales_data_using_sqlite_query`, or the pre-built Code Interpreter depending on the user request.
 
@@ -301,7 +301,7 @@ agent = project_client.agents.create_agent(
 
 ## What are the special considerations for using the Tool Use Design Pattern to build trustworthy AI agents?
 
-A common concern with SQL dynamically generated by LLMs is security, particularly the risk of SQL injection or malicious actions, such as dropping or tampering with the database. While these concerns are valid, they can be effectively mitigated by properly configuring database access permissions. For most databases this involves configuring the database as read-only. For database services like PostgreSQL or Azure SQL, the app should be assigned a read-only (SELECT) role. R
+A common concern with SQL dynamically generated by LLMs is security, particularly the risk of SQL injection or malicious actions, such as dropping or tampering with the database. While these concerns are valid, they can be effectively mitigated by properly configuring database access permissions. For most databases this involves configuring the database as read-only. For database services like PostgreSQL or Azure SQL, the app should be assigned a read-only (SELECT) role.
 
 Running the app in a secure environment further enhances protection. In enterprise scenarios, data is typically extracted and transformed from operational systems into a read-only database or data warehouse with a user-friendly schema. This approach ensures that the data is secure, optimized for performance and accessibility, and that the app has restricted, read-only access.
 

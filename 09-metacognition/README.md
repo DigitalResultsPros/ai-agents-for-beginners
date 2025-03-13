@@ -14,7 +14,7 @@ After completing this lesson, you'll be able to:
 
 ## Introduction to Metacognition
 
-Metacognition refers to the higher-order cognitive processes that involve thinking about one’s own thinking. For AI agents, this means being able to evaluate and adjust their actions based on self-awareness and past experiences. Metacognition, or "thinking about thinking," is an important concept in the development of agentic AI systems. It involves AI systems being aware of their own internal processes and being able to monitor, regulate, and adapt their behavior accordingly. Much like we do when we read the room or look a problem.  This self-awareness can help AI systems make better decisions, identify errors, and improve their performance over time- again linking back to turing test and the debate over is AI going to take over.
+Metacognition refers to the higher-order cognitive processes that involve thinking about one’s own thinking. For AI agents, this means being able to evaluate and adjust their actions based on self-awareness and past experiences. Metacognition, or "thinking about thinking," is an important concept in the development of agentic AI systems. It involves AI systems being aware of their own internal processes and being able to monitor, regulate, and adapt their behavior accordingly. Much like we do when we read the room or look at a problem. This self-awareness can help AI systems make better decisions, identify errors, and improve their performance over time- again linking back to the Turing test and the debate over whether AI is going to take over.
 
 In the context of agentic AI systems, metacognition can help address several challenges, such as:
 - Transparency: Ensuring that AI systems can explain their reasoning and decisions.
@@ -24,9 +24,9 @@ In the context of agentic AI systems, metacognition can help address several cha
 
 ### What is Metacognition?
 
-Metacognition, or "thinking about thinking," is a higher-order cognitive process that involves self-awareness and self-regulation of one's cognitive processes. In the realm of AI, metacognition empowers agents to evaluate and adapt their strategies and actions, leading to improved problem-solving and decision-making capabilities. By understanding metacognition, you can design AI agents that are not only more intelligent but also more adaptable and efficient. In true metacognition, you’d see the AI explicitly reasoning about its own reasoning. 
+Metacognition, or "thinking about thinking," is a higher-order cognitive process that involves self-awareness and self-regulation of one's cognitive processes. In the realm of AI, metacognition empowers agents to evaluate and adapt their strategies and actions, leading to improved problem-solving and decision-making capabilities. By understanding metacognition, you can design AI agents that are not only more intelligent but also more adaptable and efficient. In true metacognition, you’d see the AI explicitly reasoning about its own reasoning.
 
-Eample: “I prioritized cheaper flights because… I might be missing out on direct flights, so let me re-check.”.
+Example: “I prioritized cheaper flights because… I might be missing out on direct flights, so let me re-check.”.
 Keeping track of how or why it chose a certain route.
 - Noting that it made mistakes because it over-relied on user preferences from last time, so it modifies its decision-making strategy not just the final recommendation.
 - Diagnosing patterns like, “Whenever I see the user mention ‘too crowded,’ I should not only remove certain attractions but also reflect that my method of picking ‘top attractions’ is flawed if I always rank by popularity.”
@@ -53,7 +53,7 @@ Before diving into metacognitive processes, it's essential to understand the bas
 These components work together to create an "expertise unit" that can perform specific tasks.
 
 **Example**:
-Consider a travel agent, agent services that not only plans the your holiday but also adjusts its path based on real-time data and past customer journey experiences.
+Consider a travel agent, agent services that not only plans your holiday but also adjusts its path based on real-time data and past customer journey experiences.
 
 ### Example: Metacognition in a Travel Agent Service
 
@@ -237,7 +237,7 @@ travel_agent.adjust_based_on_feedback(feedback)
 
 ## 3. Corrective RAG System
 
-Firstly lets start by understanding the difference between RAG Tool and Pre-emptive Context Load
+Firstly let's start by understanding the difference between RAG Tool and Pre-emptive Context Load
 
 ![RAG vs Context Loading](./images/rag-vs-context.png)
 
@@ -1109,9 +1109,9 @@ In this example, we'll design a code generating agent, Travel Agent, to assist u
    print("Updated Itinerary:", updated_itinerary)
    ```
 
-### Leveraging environment awareness and reasoning
+### Leveraging environmental awareness and reasoning
 
-Based on the schema of the table can indeed enhance the query generation process by leveraging environment awareness and reasoning.
+Based on the schema of the table can indeed enhance the query generation process by leveraging environmental awareness and reasoning.
 
 Here's an example of how this can be done:
 
@@ -1316,13 +1316,13 @@ A data analysis agent:
    SELECT * FROM attractions WHERE destination='Paris' AND interests='museums, cuisine';
    ```
 
-By leveraging SQL as part of the Retrieval-Augmented Generation (RAG) technique, AI agents like Travel Agent can dynamically retrieve and utilize relevant data to provide accurate and personalized recommendations. 
+By leveraging SQL as part of the Retrieval-Augmented Generation (RAG) technique, AI agents like Travel Agent can dynamically retrieve and utilize relevant data to provide accurate and personalized recommendations.
 
-### Example of Metacongition 
+### Example of Metacongition
 
 So to demonstrate an implementation of metacongition, let's create a simple agent that *reflects on its decision-making process* while solving a problem. For this example, we'll build a system where an agent tries to optimize the choice of a hotel, but then evaluates its own reasoning and adjusts its strategy when it makes errors or suboptimal choices.
 
-We'll simulate this using a basic example where the agent selects hotels based on a combination of price and quality, but it will "reflect" on its decisions and adjust accordingly. 
+We'll simulate this using a basic example where the agent selects hotels based on a combination of price and quality, but it will "reflect" on its decisions and adjust accordingly.
 
 #### How this illustrates metacognition:
 
@@ -1406,7 +1406,7 @@ adjusted_recommendation = agent.recommend_hotel(hotels, 'highest_quality')
 print(f"Adjusted hotel recommendation (highest_quality): {adjusted_recommendation['name']}")
 ```
 
-#### Agents Metacognition Abilities 
+#### Agents Metacognition Abilities
 
 The key here is the agent's ability to:
 - Evaluate its previous choices and decision-making process.
